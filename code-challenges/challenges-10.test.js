@@ -8,30 +8,30 @@ Build a simple express server. Connect a '/hello' route that sends a greeting of
 
 const createServer = () => {
   
-  // const express = require ('express'); //do I need to install node and express in the directory of this file?
-  // const app = express();
+  const express = require ('express'); //do I need to install node and express in the directory of this file?
+  const app = express();
 
-  // app.get('/hello', (req, res) => {
-  //   res.send('Hello!');
-  // });
+  app.get('/hello', (req, res) => {
+    res.send('Hello!');
+  });
 
-  // app.get('/aboutme', (req, res) => {
-  //   res.send('I am a robot.');
-  // });
+  app.get('/aboutme', (req, res) => {
+    res.send('I am a robot.');
+  });
 
-  // app.get('/favoritefoods', (req, res) => {
-  //   res.send(['Peanut Butter', 'Italian', 'Indian']);
-  // });
+  app.get('/favoritefoods', (req, res) => {
+    res.send(['Peanut Butter', 'Italian', 'Indian']);
+  });
 
-  // app.get('*', (req, res) => {
-  //   res.status(404).send('not found');
-  // })
+  app.get('*', (req, res) => {
+    res.status(404).send('not found');
+  })
 
-  // var server = app.listen(3301, function () {
-  //   var port = server.address().port;
-  //   console.log('Example app listening at port', port);
-  // });
-  // return server;
+  var server = app.listen(3301, function () {
+    var port = server.address().port;
+    // console.log('Example app listening at port', port);
+  });
+  return server;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -82,21 +82,25 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-  let outerArray = [];
-  input.forEach (array => {
 
-    let innerArray = [];
-    array.forEach (number => {
-      if (number % 5 === 0){
-        return innerArray.push(2 ** number);
-      } else if (typeof number !== 'number'){ //why are the strings '5', '10', & '15' passing for integers?
-        //console.log('not number: ', number)
-        return innerArray.push();
-      }
-    })
-    return outerArray.push(innerArray);
+let parentArray = [];
+
+input.forEach( nestedArray => {
+  let innerArray = [];
+  let childArray = nestedArray.filter ( number => {
+    if(typeof number === 'number' && number % 5 === 0){
+      return true;
+    }
   })
-  return outerArray;
+  childArray.forEach ( number2 => {
+    innerArray.push(2**number2);
+    return innerArray;
+  })
+  parentArray.push(innerArray);
+  return parentArray;
+})
+console.log('parentArray:', parentArray);
+return parentArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
