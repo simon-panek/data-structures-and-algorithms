@@ -252,9 +252,10 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  let characterNames = arr.map ( (character, idx) => {
-    return character.name;
-  })
+  let characterNames = [];
+   arr.reduce ( (character, cur) => {
+    return characterNames.push(cur.name);
+  },0)
   return characterNames;
 };
 
