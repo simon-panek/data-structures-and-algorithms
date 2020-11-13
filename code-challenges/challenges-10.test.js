@@ -8,7 +8,7 @@ Build a simple express server. Connect a '/hello' route that sends a greeting of
 
 const createServer = () => {
   
-  const express = require ('express'); //do I need to install node and express in the directory of this file?
+  const express = require ('express'); 
   const app = express();
 
   app.get('/hello', (req, res) => {
