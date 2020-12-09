@@ -32,6 +32,11 @@ Each day, you'll add one new file to this folder to do your work for the day's a
     - Your implementation and tests for the code challenge
     - Perform your work in accordance with your 401 language's instructions
 
+### 401 Table of Contents
+
+- [Array Reverse - Day 01](javascript/code-challenges/arrays/arrayReverse/README.md)
+- [Array Shift  - Day 01](javascript/code-challenges/arrays/arrayShift/README.md)
+
 The final structure should resemble this:
 
 ```bash
@@ -42,9 +47,10 @@ The final structure should resemble this:
   │  └── challenge-02.test.js
   │  └── ...
   |
-  ├── [language]
-  │   └── [data-structure-name]
-  │       └── challenges
+  ├── [javascript]
+  │   └── [code-challenges]
+  │       └── arrays
+  |         |__ arrayReverse
   │   └── [data-structure-name]
   │       └── challenges
   │   └── [data-structure-name]
