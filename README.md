@@ -35,7 +35,8 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 ### 401 Table of Contents
 
 - [Array Reverse - Day 01](javascript/code-challenges/arrays/arrayReverse/README.md)
-- [Array Shift  - Day 01](javascript/code-challenges/arrays/arrayShift/README.md)
+- [Array Shift  - Day 02](javascript/code-challenges/arrays/arrayShift/README.md)
+- [Array Binary Search  - Day 03](javascript/code-challenges/arrays/arrayBinarySearch/README.md)
 
 The final structure should resemble this:
 
