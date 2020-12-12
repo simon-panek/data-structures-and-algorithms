@@ -58,12 +58,12 @@ describe('Linked List', () => {
   it('Should return a string of all of the node values', () => {
       const list = new LinkedList();
       list.insert('one');
-      // list.insert('two');
-      // list.insert('three');
-      // list.insert('easterEgg');
-      // list.insert('five');
+      list.insert('two');
+      list.insert('three');
+      list.insert('easterEgg');
+      list.insert('five');
       let test = list.toString();
-      expect(test).toEqual('{ one } -> NULL');
+      expect(test).toEqual('{ five } -> { easterEgg } -> { three } -> { two } -> { one } -> NULL');
     })   
 
 });
