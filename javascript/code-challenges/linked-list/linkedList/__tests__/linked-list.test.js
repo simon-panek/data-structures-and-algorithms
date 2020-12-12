@@ -4,7 +4,8 @@
 const LinkedLilst = require('../index');
 
 describe('Linked List', () => {
-  it('works', () => {
-    expect(true).toBeTruthy();
+  it('Can successfully instantiate an empty linked list', () => {
+    const list = new LinkedList();
+    expect(this.head).toEqual(null);
   });
 });
