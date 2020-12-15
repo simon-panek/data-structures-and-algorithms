@@ -2,7 +2,7 @@
 
 ## Author: Simon Panek
 
-## Contributors and Collaborators: Nicco!
+## Contributors and Collaborators: Ricardo, Nicco, and Cait!
 
 ## Challenge
 
@@ -28,8 +28,4 @@ This solution creates a class for a singular node and a class for a linked list.
 
 ## Whiteboard
 
-![Whiteboard Image]()
-
-## Code
-
-[Code]
+![Whiteboard Image](codechallenge06.png)
