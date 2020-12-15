@@ -40,6 +40,52 @@ class LinkedList { //creates LinkedList class
     return outPutString.join(' -> '); //join the array using the -> delimiter and return output
   }
 
+  append(newValue) {
+    const newNode = new Node(newValue);
+    let currentNode = this.head;
+
+    while (currentNode.next !== null) {
+      currentNode = currentNode.next;
+    }
+    currentNode.next = newNode;
+    newNode.next = null;
+  }
+
+  //Code Challenge Day 06 Below
+
+  insertBefore(givenValue, newValue) {
+    if(this.head === null) return false;
+
+    const newNode = new Node(newValue);
+    let currentNode = this.head;
+
+    if(currentNode.value === givenValue) {
+      newNode.next = currentNode;
+      newNode = this.head;
+    }
+
+    let nextNode = currentNode.next;
+    while (nextNode.value !== givenValue) {
+      currentNode = currentNode.next;
+      nextNode = nextNode.next;
+    }
+    currentNode.next = newNode;
+    newNode.next = nextNode;
+  }
+
+  insertAfter(givenValue, newValue) {
+    if(this.head === null) return false;
+    const newNode = new Node(newValue);
+    let currentNode = this.head;
+    let nextNode = currentNode.next;
+    while(currentNode.value !== givenValue) {
+      currentNode = currentNode.next;
+      nextNode = nextNode.next;
+    }
+    currentNode.next = newNode;
+    newNode.next = nextNode;
+  }
+
 }
 
 module.exports = LinkedList;

@@ -66,4 +66,40 @@ describe('Linked List', () => {
       expect(test).toEqual('{ five } -> { easterEgg } -> { three } -> { two } -> { one } -> NULL');
     })   
 
+  //Code Challenge Day 06 Below//////////////////////////
+
+  it('Should add a node at the end of the list', () => {
+    const list = new LinkedList();
+      list.insert('one');
+      list.insert('two');
+      list.insert('three');
+      list.append('test')
+      list.insert('four');
+      list.insert('five');
+      expect(list.toString()).toEqual('{ five } -> { four } -> { three } -> { two } -> { one } -> { test } -> NULL');
+  })
+
+  it('Should add a node to the list before the given value', () => {
+    const list = new LinkedList();
+      list.insert('one');
+      list.insert('two');
+      list.insert('three');
+      list.insert('four');
+      list.insert('five');
+      list.insertBefore('four', 'newValue')
+      expect(list.head.next.value).toEqual('newValue');
+  })
+
+  it('Should add a node to the list after the given value', () => {
+    const list = new LinkedList();
+      list.insert('one');
+      list.insert('two');
+      list.insert('three');
+      list.insert('four');
+      list.insert('five');
+      list.insertAfter('four', 'newValue')
+      expect(list.head.next.next.value).toEqual('newValue');
+  })
+
+
 });
