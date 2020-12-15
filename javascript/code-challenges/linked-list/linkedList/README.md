@@ -2,15 +2,15 @@
 
 ## Author: Simon Panek
 
-## Contributors and Collaborators: Ricardo, Nicco, and Cait!
+## Contributors and Collaborators: Ricardo, Stacy, Nicco, and Cait!
 
 ## Challenge
 
 Create a class that will allow the creation of linked lists. It should allow a new node to be created, a list to be searched for matching contents, and a string of the entire list to be generated, a node to be appended, and nodes to be added before or after a target node.
 
-## Approach 
+## Approach
 
-This solution creates a class for a singular node and a class for a linked list. Six methods allow interaction with the linked list.
+This solution creates a class for a singular node and a class for a linked list. Seven methods allow interaction with the linked list.
 
 ## API & Efficiency
 
@@ -26,6 +26,10 @@ This solution creates a class for a singular node and a class for a linked list.
 
 - `insertAfter()` - Adds a new node with given `newValue` immediately after the first `value` node. It operates with an efficiency of O(n).
 
+- `kthFromEnd()` - Returns the value of a node at the given position from the null end of the list. It operates with an efficiency of O(n).
+
 ## Whiteboard
 
-![Whiteboard Image](codechallenge06.png)
+![Whiteboard Image Day 6](codechallenge06.png)
+
+![Whiteboard Image Day 7](k-th-valuefromtheend.png)
