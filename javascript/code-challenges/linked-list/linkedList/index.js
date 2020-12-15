@@ -86,6 +86,23 @@ class LinkedList { //creates LinkedList class
     newNode.next = nextNode;
   }
 
+  kthFromEnd(k) {
+    let nodeValue = [];
+    let currentNode = this.head;
+
+    if (k < 0) return false;
+
+    while(currentNode.next !== null){
+      nodeValue.unshift(currentNode.value);
+      currentNode = currentNode.next;
+    }
+    nodeValue.unshift(currentNode.value);
+
+    if(k>nodeValue.length - 1) return false;
+
+    return nodeValue[k];
+  }
+
 }
 
 module.exports = LinkedList;
