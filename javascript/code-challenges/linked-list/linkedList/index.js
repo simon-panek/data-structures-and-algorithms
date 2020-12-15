@@ -40,6 +40,8 @@ class LinkedList { //creates LinkedList class
     return outPutString.join(' -> '); //join the array using the -> delimiter and return output
   }
 
+  //Code Challenge Day 06 Below
+
   append(newValue) {
     const newNode = new Node(newValue);
     let currentNode = this.head;
@@ -50,8 +52,6 @@ class LinkedList { //creates LinkedList class
     currentNode.next = newNode;
     newNode.next = null;
   }
-
-  //Code Challenge Day 06 Below
 
   insertBefore(givenValue, newValue) {
     if(this.head === null) return false;
