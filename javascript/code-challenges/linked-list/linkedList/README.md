@@ -10,7 +10,7 @@ Create a class that will allow the creation of linked lists. It should allow a n
 
 ## Approach
 
-This solution creates a class for a singular node and a class for a linked list. Seven methods allow interaction with the linked list.
+This solution creates a class for a singular node and a class for a linked list. Eight methods allow interaction with the linked list.
 
 ## API & Efficiency
 
@@ -28,8 +28,12 @@ This solution creates a class for a singular node and a class for a linked list.
 
 - `kthFromEnd()` - Returns the value of a node at the given position from the null end of the list. It operates with an efficiency of O(n).
 
+- `zipLists()` - Returns a single list created from two given lists. The nodes should alternate. It should operate with an efficiency of O(1).
+
 ## Whiteboard
 
 ![Whiteboard Image Day 6](codechallenge06.png)
 
 ![Whiteboard Image Day 7](k-th-valuefromtheend.png)
+
+![Whiteboard Image Day 8](401-cc-08-whiteboard.png)
