@@ -105,7 +105,7 @@ class LinkedList { //creates LinkedList class
 
 }
 
-llZip(givenListOne, givenListTwo) {
+function llZip(givenListOne, givenListTwo) {
 
   if(givenListOne === null && givenListTwo !== null) { return givenListTwo };
   if(givenListOne !== null && givenListTwo === null) { return givenListOne };
