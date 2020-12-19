@@ -38,8 +38,9 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 - [Array Shift  - Day 02](javascript/code-challenges/arrays/arrayShift/README.md)
 - [Array Binary Search  - Day 03](javascript/code-challenges/arrays/arrayBinarySearch/README.md)
 - [Singly Linked Lists - Day 05, 06, 07, & 08](javascript/code-challenges/linked-list/linkedList/README.md)
+- [Singly Stacks & Queues - Day 10](javascript/code-challenges/stack-and-queue/README.md)
 
-The final structure should resemble this:
+The final structure should resemble this:s
 
 ```bash
   data-structures-and-algorithms

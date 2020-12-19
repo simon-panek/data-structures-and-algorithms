@@ -2,6 +2,10 @@
 
 ## Author: Simon Panek
 
+## Resources
+
+[Info about stacks and queues with examples](https://medium.com/javascript-in-plain-english/javascript-what-are-stack-and-queue-79df7af5a566)
+
 ## Challenge
 
 Create a class of Stacks and a Class of Queues along with an assortment of methods to use on those classes.

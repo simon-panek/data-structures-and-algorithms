@@ -103,6 +103,15 @@ class LinkedList { //creates LinkedList class
     return nodeValue[k];
   }
 
+  //////////////////////////Stacks and Queues below ///////////////////////////
+
+  shift() {
+    let currentNode = this.head;
+    this.head = currentNode.next;
+   // currentNode.next = null;
+    return currentNode;
+  }
+
 }
 
 // llZip(givenListOne, givenListTwo) {
