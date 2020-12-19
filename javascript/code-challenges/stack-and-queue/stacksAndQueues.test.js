@@ -63,26 +63,27 @@ describe('Stacks and Queues', () => {
     it('8. can successfully enqueue into a queue', () => {
       let queue = new Queue ();
       queue.enqueue('one');
-      expect(queue.front).toEqual('one');
+      expect(queue.front.value).toEqual('one');
     })
     it('9. can successfully enqueue multiple values into a queue', () => {
       let queue = new Queue ();
       queue.enqueue('one');
       queue.enqueue('two');
       queue.enqueue('three');
-      expect(queue.toString()).toEqual('{ three } -> { two } -> { one } -> NULL');
+      expect(queue.front.next.next.value).toEqual('three');
     })
     it('10. can successfully return a dequeued value from the queue', () => {
       let queue = new Queue ();
       queue.enqueue('one');
-      expect(queue.dequeue()).toEqual('one');
+      // console.log('10', queue.dequeue());
+      // let test = queue.dequeue();
+      expect(queue.dequeue().value).toEqual('one');
     })
     it('11. can successfully peek into a queue and return the value', () => {
       let queue = new Queue ();
-      queue.enqueue('one');
       queue.enqueue('two');
       queue.enqueue('three');
-      expect(queue.peek()).toEqual('three');
+      expect(queue.peek().value).toEqual('two');
     })
     it('12. can successfully empty a queue after multiple dequeues', () => {
       let queue = new Queue ();
@@ -96,7 +97,7 @@ describe('Stacks and Queues', () => {
     })
     it('13. can successfully instantiate an empty queue', () => {
       let queue = new Queue();
-      expect(queue.peek()).toEqual(null);
+      expect(queue.peek()).toEqual(false);
     })
     it('14. calling dequeue or peek on an empty stack raises an exception', () => {
       let queue = new Queue();

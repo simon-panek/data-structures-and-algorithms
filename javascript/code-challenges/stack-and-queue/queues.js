@@ -1,33 +1,48 @@
 'use strict';
 
+//const LinkedList = require ('./linkedList.js');
+const Node = require('./node.js');
+
 class Queue {
   constructor() {
-    this.storage = new Array();
-    this.top = null;
+    this.storage = null;
+    // this.end = null;
+    this.front = null;
+   
   }
 
   isEmpty(){
-    return (this.top === null)? true : false;
+    return (this.front === null)? true : false;
   }
 
   peek(){
-    if(!this.top) return false;
+    if(!this.front) return false;
 
-    return this.top;
+    return this.front;
   }
 
-  enqueue(){
-    this.storage.insert(value);
-    this.top = value;
+  enqueue(value){
+  //  this.storage.append(value);
+    // this.top = 
+    let newNode = new Node (value);
+    let currentNode = this.front;
+    if(!currentNode) {
+      this.front = newNode;
+    } else {
+      while (currentNode.next){
+        currentNode = currentNode.next;
+      }
+      currentNode.next = newNode;
+     }
   }
 
   dequeue(){
-    if(!this.top) return false;
+    if(!this.front) return false;
 
-    const value = this.storage.shift();
-    this.top =  value.next;
+    const value = this.front;
+    this.front =  value.next;
 
-    return value.value;
+    return value;
   }
 }
 
