@@ -4,6 +4,10 @@
 
 ## Contributors and Collaborators: Ricardo, Stacy, Nicco, and Cait!
 
+## Resources
+
+[YouTube video by Jason Lay regarding the zipping of linked lists](https://www.youtube.com/watch?v=2algBs0nxEk);
+
 ## Challenge
 
 Create a class that will allow the creation of linked lists. It should allow a new node to be created, a list to be searched for matching contents, and a string of the entire list to be generated, a node to be appended, and nodes to be added before or after a target node.
