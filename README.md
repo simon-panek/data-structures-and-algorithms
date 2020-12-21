@@ -39,6 +39,7 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 - [Array Binary Search  - Day 03](javascript/code-challenges/arrays/arrayBinarySearch/README.md)
 - [Singly Linked Lists - Day 05, 06, 07, & 08](javascript/code-challenges/linked-list/linkedList/README.md)
 - [Singly Stacks & Queues - Day 10](javascript/code-challenges/stack-and-queue/README.md)
+- [PseudoQueue - Day 11](javascript/code-challenges/stack-and-queue/queueWithStacks/README.md)
 
 The final structure should resemble this:s
 
