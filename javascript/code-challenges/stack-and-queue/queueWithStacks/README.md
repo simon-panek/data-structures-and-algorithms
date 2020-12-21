@@ -19,4 +19,3 @@ Implement a queue using two stacks
 ## Solution
 
 ![Link to Whiteboard Solution](401-cc-11.png)
-
