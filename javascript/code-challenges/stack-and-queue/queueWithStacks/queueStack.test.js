@@ -10,28 +10,26 @@ describe ('PseudoQueue', () => {
       queue.enqueue('one');
       queue.enqueue('two');
       queue.enqueue('three');
-      expect(this.stack[2]).toEqual('three');
+      expect(queue.stackA.storage.head.value).toEqual('three');
     })
-
-    it('2. should return false when no queue exist', () => {
-      
-
-    })
-
   })
 
   describe ('Dequeue', () => {
 
     describe ('Enqueue', () => {
-      it ('3. should remove one stack from the que', () => {
-  
+      it ('2. should remove one stack from the que', () => {
+      const queue = new PseudoQueue ();
+      queue.enqueue('one');
+      queue.enqueue('two');
+      queue.enqueue('three');
+      queue.dequeue();
+      expect(queue.stackA.storage.head.value).toEqual('three');
       })
   
-      it('4. should return false when no stacks are in the que', () => {
-  
+      it('3. should return error message when no stacks are in the que', () => {
+        const queue = new PseudoQueue ();
+        expect(queue.dequeue()).toEqual('Queue is empty');
       })
-
-      it('5. should ')
   
     })
 
