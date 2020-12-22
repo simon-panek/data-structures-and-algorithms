@@ -40,6 +40,7 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 - [Singly Linked Lists - Day 05, 06, 07, & 08](javascript/code-challenges/linked-list/linkedList/README.md)
 - [Singly Stacks & Queues - Day 10](javascript/code-challenges/stack-and-queue/README.md)
 - [PseudoQueue - Day 11](javascript/code-challenges/stack-and-queue/queueWithStacks/README.md)
+- [AnimalShelter - Day 12](javascript/code-challenges/stack-and-queue/fifoAnimalShelter/README.md)
 
 The final structure should resemble this:s
 
