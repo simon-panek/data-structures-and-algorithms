@@ -24,6 +24,9 @@ function multiFunctionValidate (string) {
   // }
 
   let stringArray = Array.from(string);
+
+  if(!string) return false;
+
   let testArrayOne = [];
 
   for (let i = 0; i<stringArray.length; i++) {
