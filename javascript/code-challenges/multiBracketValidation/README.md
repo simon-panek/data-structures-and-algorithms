@@ -12,4 +12,4 @@ The solution for this problem involved turning the string into an array and chec
 
 ## Solution
 
-![Whiteboard Solution]()
+![Whiteboard Solution](javascript/code-challenges/multiBracketValidation/codechallenge13whiteboard.png)
