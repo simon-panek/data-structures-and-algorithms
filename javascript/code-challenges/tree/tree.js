@@ -11,8 +11,8 @@ class Node { //create node class
 
 class BinaryTree { //create binary tree class
 
-  constructor (rootValue=null, rootLeftChild=null, rootRightChild=null) { //define default values
-    this.root = root;
+  constructor (rootValue=null) { //define default values
+    this.root = new Node(rootValue);
   }
 
   preOrder (rootNode) { //create preOrder method
@@ -82,10 +82,12 @@ class BinaryTree { //create binary tree class
 class BinarySearchTree { //create a binary search tree function
 
   constructor (root=null) { //define the default values
-    this.root = root;
+    this.root = new Node (root);
   }
 
-  add(newNode){ //create add method
+  add(newNodeValue){ //create add method
+
+    let newNode = new Node(newNodeValue);
 
     if(!this.root) { //check if this.root exists, if not assign the newNode to this.root
       this.root = newNode;
@@ -93,17 +95,17 @@ class BinarySearchTree { //create a binary search tree function
       _recursionAdd(this.root, newNode); //if this.root does exist, then invoke recursive function passing this.root and newNode
     }
 
-    function _recursionAdd(root, newNode) { //create recursive function to traverse
-      if(newNode.value < root.value) { //if newNode value is less than root value and root.left doesn't exist make the newNode root.left
-        if(!root.left) {
-          root.left = newNode;
+    function _recursionAdd(node, newNode) { //create recursive function to traverse
+      if(newNode.value < node.value) { //if newNode value is less than root value and root.left doesn't exist make the newNode root.left
+        if(!node.left) {
+          node.leftChild = newNode;
         } else {
-          _recursionAdd(root.left, newNode); //otherwise re call the function with root.left and newNode
+          _recursionAdd(node.left, newNode); //otherwise re call the function with root.left and newNode
         }
-      } else if(!root.right) { //if root. right doesn't exist make root.right equal to the newNode
-        root.right = newNode;
+      } else if(!node.right) { //if root. right doesn't exist make root.right equal to the newNode
+        node.rightChild = newNode;
       } else {
-        _recursionAdd(root.right, newNode); //otherwise re call the function with root.right and newNode
+        _recursionAdd(node.right, newNode); //otherwise re call the function with root.right and newNode
       }
     }
 
@@ -129,6 +131,26 @@ class BinarySearchTree { //create a binary search tree function
 
     return booleanResult; //return the boolean
   }
+
+  // preOrder (rootNode) { //create preOrder method
+
+  //   let orderedArray = []; //declare empty array for output
+
+  //   function _recursionPre(rootNode) { //create recursive function to traverse tree
+
+  //     if(!rootNode) { //check if root exists, if not return
+  //       return;
+  //     }
+
+  //     orderedArray.push[rootNode.value]; //push the current root value into the output array
+
+  //     _recursionPre(rootNode.left); //re call the function for the left child
+  //     _recursionPre(rootNode.right); //re call the function for the right child
+  //   }
+  //   _recursionPre(rootNode); //invoke the recursive function to start
+    
+  //   return orderedArray; //return the output array
+  // }
 }
 
 module.exports = {Node, BinaryTree, BinarySearchTree};

@@ -22,4 +22,3 @@ Creates a Node class, Binary Tree class, and Binary Search Tree class
 
 - `add` *which adds a node with a given value to the correct location in a binary search tree*
 - `contains` *returns a boolean indicating whether a searched value is located in a binary search tree
-
