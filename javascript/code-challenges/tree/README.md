@@ -1,6 +1,8 @@
 # Trees
 
-## Author: Simon Panek
+## Author: Simon Panek, Mariko Alvarado, Ricardo Barcenas
+
+### Collaborator: Dina Ayoub
 
 ## Challenge 15 & 16
 
@@ -27,4 +29,4 @@ Creates a Node class, Binary Tree class, and Binary Search Tree class
 
 ## Whiteboard
 
-![Whiteboard for Challenge #16]()
+![Whiteboard for Challenge #16](cc16.png)
