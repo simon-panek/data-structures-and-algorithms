@@ -11,47 +11,50 @@ class Node { //create node class
 
 class BinaryTree { //create binary tree class
 
-  constructor (rootValue=null) { //define default values
+  constructor (value=null) { //define default values
     //this.root = new Node(rootValue);
-    this.root = rootValue;
+    this.root = value;
   }
 
-  // add(value){
-  //   if(typeof value !== 'number'){
-  //     return null;
-  //   }
-  //   if(!this.root){
-  //     this.root = new Node(value);
-  //     return;
-  //   }
+  add(value){
+    if(typeof value !== 'number'){
+      return null;
+    }
+    if(!this.root){
+      this.root = new Node(value);
+      return;
+    }
 
-  //   let _insert = (node) => {
-  //     if (value < node.value){
-  //       if(node.leftChild === null){
-  //         node.leftChild = new Node(value);
-  //       } else if (node.leftChild !== null){
-  //         return _insert(node.leftChild);
-  //       }
-  //     } else if(value >= node.value){
-  //       if(node.rightChild === null){
-  //         node.rightChild = new Node(value);
-  //         return;
-  //       } else if (node.rightChild !== null) {
-  //           return _insert(node.rightChild);
-  //       }
-  //     }
-  //   }
-  //   _insert(this.root);
-  // }
+    let _insert = (node) => {
+      if (value < node.value){
+        if(node.leftChild === null){
+          node.leftChild = new Node(value);
+          return;
+        } else if (node.leftChild !== null){
+          return _insert(node.leftChild);
+        }
+      } else if(value >= node.value){
+        if(node.rightChild === null){
+          node.rightChild = new Node(value);
+          return;
+        } else if (node.rightChild !== null) {
+            return _insert(node.rightChild);
+        }
+      }
+    }
+    _insert(this.root);
+  }
 
   //depth first search
-  preOrder (rootNode) { //create preOrder method
+  preOrder () { //create preOrder method
     let orderedArray = []; //declare empty array for output
     function _recursionPre(node) { //create recursive function to traverse tree
       // if(!node) { //check if root exists, if not return
       //   return;
       // }
-      orderedArray.push[node.value]; //push the current root value into the output array
+  // console.log('T#0 node.value', node.value);
+      orderedArray.push(node.value); //push the current root value into the output array
+  // console.log('T#1 orderedArray', orderedArray);
       if(node.leftChild) {
         _recursionPre(node.leftChild); //re call the function for the left child
       }
@@ -59,42 +62,81 @@ class BinaryTree { //create binary tree class
         _recursionPre(node.rightChild); //re call the function for the right child
       }
     }
-    _recursionPre(rootNode); //invoke the recursive function to start
+    _recursionPre(this.root); //invoke the recursive function to start
     return orderedArray; //return the output array
   }
 
-  inOrder(rootNode) { //create an inOrder method
-      let orderedArray = []; //declare empty array for output
-      function _recursionPre(node) { //create recursive function to traverse tree
-        if(node.leftChild) {
-          _recursionPre(node.leftChild); //re call the function for the left child
-        }
-        orderedArray.push[node.value]; //push the current root value into the output array
-        if(node.rightChild){
-          _recursionPre(node.rightChild); //re call the function for the right child
-        }
-      }
-    _recursionPre(rootNode); //invoke the recursive function to start
-    return orderedArray; //return the output array
-  }
-
-  postOrder(rootNode) { //create the postOrder method
+  inOrder () { //create preOrder method
     let orderedArray = []; //declare empty array for output
     function _recursionPre(node) { //create recursive function to traverse tree
+      // if(!node) { //check if root exists, if not return
+      //   return;
+      // }
+      if(node.leftChild) {
+        _recursionPre(node.leftChild); //re call the function for the left child
+      }
+      // console.log('T#0 node.value', node.value);
+          orderedArray.push(node.value); //push the current root value into the output array
+      // console.log('T#1 orderedArray', orderedArray);
+      if(node.rightChild){
+        _recursionPre(node.rightChild); //re call the function for the right child
+      }
+    }
+    _recursionPre(this.root); //invoke the recursive function to start
+    return orderedArray; //return the output array
+  }
+
+  postOrder () { //create preOrder method
+    let orderedArray = []; //declare empty array for output
+    function _recursionPre(node) { //create recursive function to traverse tree
+      // if(!node) { //check if root exists, if not return
+      //   return;
+      // }
       if(node.leftChild) {
         _recursionPre(node.leftChild); //re call the function for the left child
       }
       if(node.rightChild){
         _recursionPre(node.rightChild); //re call the function for the right child
       }
-      orderedArray.push[node.value]; //push the current root value into the output array
+      // console.log('T#0 node.value', node.value);
+          orderedArray.push(node.value); //push the current root value into the output array
+      // console.log('T#1 orderedArray', orderedArray);
     }
-  _recursionPre(rootNode); //invoke the recursive function to start
-  return orderedArray; //return the output array
+    _recursionPre(this.root); //invoke the recursive function to start
+    return orderedArray; //return the output array
   }
+  // inOrder() { //create an inOrder method
+  //     let orderedArray = []; //declare empty array for output
+  //     function _recursionPre(node) { //create recursive function to traverse tree
+  //       if(node.leftChild) {
+  //         _recursionPre(node.leftChild); //re call the function for the left child
+  //       }
+  //       orderedArray.push(node.value); //push the current root value into the output array
+  //       if(node.rightChild){
+  //         _recursionPre(node.rightChild); //re call the function for the right child
+  //       }
+  //     }
+  //   _recursionPre(rootNode); //invoke the recursive function to start
+  //   return orderedArray; //return the output array
+  // }
 
-  findMaxValue(root){
-    let highValue = root.value; //declare empty array for output
+  // postOrder(rootNode) { //create the postOrder method
+  //   let orderedArray = []; //declare empty array for output
+  //   function _recursionPre(node) { //create recursive function to traverse tree
+  //     if(node.leftChild) {
+  //       _recursionPre(node.leftChild); //re call the function for the left child
+  //     }
+  //     if(node.rightChild){
+  //       _recursionPre(node.rightChild); //re call the function for the right child
+  //     }
+  //     orderedArray.push(node.value); //push the current root value into the output array
+  //   }
+  // _recursionPre(rootNode); //invoke the recursive function to start
+  // return orderedArray; //return the output array
+  // }
+
+  findMaxValue(){
+    let highValue = this.root.value; //declare empty array for output
     function _recursionPre(node) { //create recursive function to traverse tree
       if(highValue < node.value){ //check if node is greater than previous node
         highValue = node.value; //if true then assign current node.value to highValue
@@ -116,7 +158,7 @@ class BinarySearchTree extends BinaryTree{ //create a binary search tree functio
 
   constructor (root=null) { //define the default values
     super();
-    this.root = new Node (root);
+    this.root = root;
   }
 
   // add(newNodeValue){ //create add method
@@ -145,33 +187,33 @@ class BinarySearchTree extends BinaryTree{ //create a binary search tree functio
 
   // }
 
-  add(value){
-    if(typeof value !== 'number'){
-      return null;
-    }
-    if(!this.root){
-      this.root = new Node(value);
-      return;
-    }
+  // add(value){
+  //   if(typeof value !== 'number'){
+  //     return null;
+  //   }
+  //   if(!this.root){
+  //     this.root = new Node(value);
+  //     return;
+  //   }
 
-    let _insert = (node) => {
-      if (value < node.value){
-        if(node.leftChild === null){
-          node.leftChild = new Node(value);
-        } else if (node.leftChild !== null){
-          return _insert(node.leftChild);
-        }
-      } else if(value >= node.value){
-        if(node.rightChild === null){
-          node.rightChild = new Node(value);
-          return;
-        } else if (node.rightChild !== null) {
-            return _insert(node.rightChild);
-        }
-      }
-    }
-    _insert(this.root);
-  }
+  //   let _insert = (node) => {
+  //     if (value < node.value){
+  //       if(node.leftChild === null){
+  //         node.leftChild = new Node(value);
+  //       } else if (node.leftChild !== null){
+  //         return _insert(node.leftChild);
+  //       }
+  //     } else if(value >= node.value){
+  //       if(node.rightChild === null){
+  //         node.rightChild = new Node(value);
+  //         return;
+  //       } else if (node.rightChild !== null) {
+  //           return _insert(node.rightChild);
+  //       }
+  //     }
+  //   }
+  //   _insert(this.root);
+  // }
 
   contains(rootNode, searchValue) { //create a method that searches for a value and returns a boolean if it exists
     
