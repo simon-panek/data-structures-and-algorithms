@@ -1,3 +1,5 @@
+const Queue = require('../stack-and-queue/queues.js');
+
 'use strict';
 
 class Node { //create node class
@@ -108,13 +110,47 @@ class BinaryTree { //create binary tree class
     return highValue; //return the output array
   }
 
+  breadthFirst(){
+    if(!this.root) return null;
+
+    let breadthQueue = new Queue ();
+
+    let outputArray = [];
+    // let frontVariable;
+
+    breadthQueue.enqueue(this.root);
+     
+    while(!breadthQueue.isEmpty()) {
+//console.log('tree.js breadthQueuePeek before', breadthQueue.peek());
+
+      let frontVariable = breadthQueue.dequeue();
+
+// console.log('frontVariable.leftChild ', frontVariable.leftChild);
+
+      outputArray.push(frontVariable.value);
+
+// console.log('Tree.js outputArray', outputArray);
+
+      if(frontVariable.leftChild) {
+        breadthQueue.enqueue(frontVariable.leftChild);
+      }
+      if(frontVariable.rightChild) {
+// console.log('frontVariable.rightChild ', frontVariable.rightChild);
+        breadthQueue.enqueue(frontVariable.rightChild.value);
+      }
+// console.log('tree.js breadthQueuePeek after', breadthQueue.peek());
+console.log('queue ', breadthQueue);
+    }
+
+    return outputArray;
+  }
+
 }
 
 class BinarySearchTree extends BinaryTree{ //create a binary search tree function
 
   constructor (root=null) { //define the default values
-    super();
-    this.root = root;
+    super(root);
   }
 
   contains(rootNode, searchValue) { //create a method that searches for a value and returns a boolean if it exists

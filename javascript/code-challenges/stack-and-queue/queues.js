@@ -12,7 +12,7 @@ class Queue {
   }
 
   isEmpty(){
-    return (this.front === null)? true : false;
+    return (this.front)? false : true;
   }
 
   peek(){
@@ -39,7 +39,7 @@ class Queue {
   dequeue(){
     if(!this.front) return false;
 
-    const value = this.front;
+    const value = this.front.value;
     this.front =  value.next;
 
     return value;

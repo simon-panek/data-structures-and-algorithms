@@ -1,3 +1,4 @@
+const util = require ('util');
 'use strict';
 
 const {Node, BinaryTree, BinarySearchTree} = require ('./tree.js')
@@ -83,6 +84,19 @@ describe ('Tree Tests', () => {
     treeInstance.add(85);
     treeInstance.add(12);
     expect(treeInstance.findMaxValue()).toEqual(99);
+  })
+
+  it('10. Can return an array of values in the Breadth First order.', () => {
+    let node = new Node(7)
+    let treeInstance = new BinarySearchTree(node);
+    treeInstance.add(5);
+    treeInstance.add(99);
+    treeInstance.add(4);
+    treeInstance.add(9);
+    treeInstance.add(85);
+    treeInstance.add(12);
+    // console.log(util.inspect(treeInstance, false, null, true));
+    expect(treeInstance.breadthFirst()).toEqual([7,5,99,4,9,85,12]);
   })
 
 })
