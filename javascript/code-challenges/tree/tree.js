@@ -1,3 +1,5 @@
+const Queue = require('../stack-and-queue/queues.js');
+
 'use strict';
 
 class Node { //create node class
@@ -106,6 +108,39 @@ class BinaryTree { //create binary tree class
     }
     _recursionPre(this.root); //invoke the recursive function to start
     return highValue; //return the output array
+  }
+
+  breadthFirst(){
+    if(!this.root) return null;
+
+    let breadthQueue = new Queue ();
+
+    let outputArray = [];
+    let frontVariable;
+
+    breadthQueue.enqueue(this.root);
+     
+    while(breadthQueue.peek() !== false) {
+console.log('tree.js breadthQueuePeek before', breadthQueue.peek());
+
+      frontVariable = breadthQueue.dequeue();
+
+console.log('frontVariable.leftChild ', frontVariable.value.leftChild);
+
+      outputArray.push(frontVariable.value.value);
+
+console.log('Tree.js outputArray', outputArray);
+
+      if(frontVariable.value.leftChild) {
+        breadthQueue.enqueue(frontVariable.value.leftChild);
+      }
+      if(frontVariable.value.rightChild) {
+        breadthQueue.enqueue(frontVariable.value.rightChild);
+      }
+console.log('tree.js breadthQueuePeek after', breadthQueue.peek());
+    }
+
+    return outputArray;
   }
 
 }
