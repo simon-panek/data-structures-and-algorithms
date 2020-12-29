@@ -1,3 +1,4 @@
+const util = require ('util');
 'use strict';
 
 const {Node, BinaryTree, BinarySearchTree} = require ('./tree.js')
@@ -94,7 +95,7 @@ describe ('Tree Tests', () => {
     treeInstance.add(9);
     treeInstance.add(85);
     treeInstance.add(12);
-    console.log('treeInstance', treeInstance);
+    // console.log(util.inspect(treeInstance, false, null, true));
     expect(treeInstance.breadthFirst()).toEqual([7,5,99,4,9,85,12]);
   })
 
