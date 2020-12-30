@@ -111,38 +111,21 @@ class BinaryTree { //create binary tree class
   }
 
   breadthFirst(){
-    if(!this.root) return null;
-
-    let breadthQueue = new Queue ();
-
-    let outputArray = [];
-    // let frontVariable;
-
-    breadthQueue.enqueue(this.root);
-     
-    while(!breadthQueue.isEmpty()) {
-//console.log('tree.js breadthQueuePeek before', breadthQueue.peek());
-
-      let frontVariable = breadthQueue.dequeue();
-
-// console.log('frontVariable.leftChild ', frontVariable.leftChild);
-
-      outputArray.push(frontVariable.value);
-
-// console.log('Tree.js outputArray', outputArray);
-
-      if(frontVariable.leftChild) {
-        breadthQueue.enqueue(frontVariable.leftChild);
+    if(!this.root) return null; //check if tree exists, if not escape
+    let breadthQueue = []; //declare array queue
+    let outputArray = []; //declare output array
+    breadthQueue.push(this.root); //push this.root into queue
+    while(breadthQueue.length > 0) { //loop while queue exists
+      let frontVariable = breadthQueue.shift(); //pull off front of que put into temp var
+      outputArray.push(frontVariable.value); 
+      if(frontVariable.leftChild) { //check for left child
+        breadthQueue.push(frontVariable.leftChild); //push into queue
       }
-      if(frontVariable.rightChild) {
-// console.log('frontVariable.rightChild ', frontVariable.rightChild);
-        breadthQueue.enqueue(frontVariable.rightChild.value);
+      if(frontVariable.rightChild) { //check for right child
+        breadthQueue.push(frontVariable.rightChild); //push into queue
       }
-// console.log('tree.js breadthQueuePeek after', breadthQueue.peek());
-console.log('queue ', breadthQueue);
     }
-
-    return outputArray;
+    return outputArray; //return output array
   }
 
 }
