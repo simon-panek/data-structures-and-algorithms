@@ -77,7 +77,7 @@ describe('Stacks and Queues', () => {
       queue.enqueue('one');
       // console.log('10', queue.dequeue());
       // let test = queue.dequeue();
-      expect(queue.dequeue().value).toEqual('one');
+      expect(queue.dequeue()).toEqual('one');
     })
     it('11. can successfully peek into a queue and return the value', () => {
       let queue = new Queue ();
@@ -93,7 +93,7 @@ describe('Stacks and Queues', () => {
       queue.dequeue();
       queue.dequeue();
       queue.dequeue();
-      expect(queue.front).toEqual(null);
+      expect(queue.peek()).toEqual(false);
     })
     it('13. can successfully instantiate an empty queue', () => {
       let queue = new Queue();
