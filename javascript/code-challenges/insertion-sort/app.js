@@ -1,25 +1,16 @@
 'use strict';
-
 function insertionSort(givenArray){
-
   for (let i=1; i< givenArray.length; i++){
-
     let j = i-1;
     let temp = givenArray[i];
-    //console.log('1) givenArray for loop: ', givenArray);
-    
     while (j>=0 && temp<givenArray[j]){
-      //console.log('2) givenArray while loop: ', givenArray);
       givenArray[j+1] = givenArray[j];
       j = j-1;
-      //console.log('3) givenArray while loop2: ', givenArray);
     }
-
     givenArray[j+1] = temp;
   }
   return givenArray;
 }
-
 module.exports = insertionSort;
 
 //given [8,5,7]

@@ -1,6 +1,9 @@
 
 # Challenge Summary
 
+- Author: Simon Panek
+- Collaborators: Mariko Alvarado & Ricardo Barcenas
+
 ## Challenge Description
 
 Create a function that sorts and array in place from lowest to hightest value.
@@ -14,4 +17,5 @@ O(n) Space = O(1)
 
 ## Solution
 
-[Whiteboard Image]()
+- No whiteboard required for this code challenge.
+- [Insertion Sort Blog Article](./blog.md)
