@@ -43,6 +43,8 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 - [AnimalShelter - Day 12](javascript/code-challenges/stack-and-queue/fifoAnimalShelter/README.md)
 - [Multi-bracket Validation - Day 13](javascript/code-challenges/multiBracketValidation/README.md)
 - [Tree - Day 15](javascript/code-challenges/tree/README.md)
+- [Insertion Sort - Day 26](javascript/code-challenges/insertion-sort/README.md)
+- [Insertion Sort - Day 26 Blog](javascript/code-challenges/insertion-sort/blog.md)
 
 
 The final structure should resemble this:s
