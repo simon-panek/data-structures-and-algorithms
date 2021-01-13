@@ -2,7 +2,7 @@
 # Challenge Summary
 
 - Author: Simon Panek
-- Collaborators: Mariko Alvarado & Ricardo Barcenas
+- Collaborators: Ricardo Barcenas
 
 Solution provided by: [Guru99](https://www.guru99.com/quicksort-in-javascript.html)
 

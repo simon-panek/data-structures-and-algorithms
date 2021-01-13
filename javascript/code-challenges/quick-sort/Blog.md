@@ -106,4 +106,4 @@ Step 19: Return the sorted array
 
 Solution provided by [Guru99](https://www.guru99.com/quicksort-in-javascript.html)
 
-![Insertion Sort](401-cc-27-merge-sort-code.png)
+![Quick Sort](401-cc-28-code.png)

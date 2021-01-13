@@ -38,9 +38,6 @@ function _quickSort (array, left = 0, right = array.length-1){
     if(left < index -1) _quickSort(array, left, index-1);
     if(index < right) _quickSort(array, index, right);
   }
-
-// console.log({array});
-
   return array;
 }
 
@@ -48,7 +45,6 @@ function partition (array, left, right) {
   let pivot = array[Math.floor((right + left)/2)];
   let i = left;
   let j = right;
-
   while (i <= j){
     while (array[i] < pivot){
       i++;
@@ -72,3 +68,4 @@ function swap (array, leftIndex, rightIndex) {
 }
 
 module.exports = _quickSort;
+
