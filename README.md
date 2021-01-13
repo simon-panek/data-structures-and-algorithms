@@ -45,6 +45,8 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 - [Tree - Day 15](javascript/code-challenges/tree/README.md)
 - [Insertion Sort - Day 26](javascript/code-challenges/insertion-sort/README.md)
 - [Insertion Sort - Day 26 Blog](javascript/code-challenges/insertion-sort/blog.md)
+- [Insertion Sort - Day 27](javascript/code-challenges/merge-sort/README.md)
+- [Insertion Sort - Day 27 Blog](javascript/code-challenges/merge-sort/blog.md)
 
 
 The final structure should resemble this:s
