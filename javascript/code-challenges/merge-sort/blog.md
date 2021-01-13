@@ -46,4 +46,6 @@ Step: 7 return the sorted array
 
 ## Working Code
 
-![Insertion Sort](.png)
+Solution provided by [Medium.com](https://medium.com/javascript-in-plain-english/javascript-merge-sort-3205891ac060)
+
+![Insertion Sort](401-cc-27-merge-sort-code.png)

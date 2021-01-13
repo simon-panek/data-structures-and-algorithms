@@ -4,6 +4,8 @@
 - Author: Simon Panek
 - Collaborators: Mariko Alvarado & Ricardo Barcenas
 
+Solution provided by [Medium.com](https://medium.com/javascript-in-plain-english/javascript-merge-sort-3205891ac060)
+
 ## Challenge Description
 
 Create a function that sorts and merges an array in place from lowest to hightest value.
