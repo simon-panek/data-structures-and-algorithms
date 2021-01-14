@@ -20,4 +20,4 @@ O(n) Space = O(1)
 ## Solution
 
 - No whiteboard required for this code challenge.
-- [Quick Sort Blog Article](./blog.md)
+- [Quick Sort Blog Article](./Blog.md)
