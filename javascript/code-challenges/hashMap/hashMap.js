@@ -49,6 +49,8 @@ class HashMap {
   }
 
   get(key) {
+    if(!this.contains(key)) return false;
+
     let index = this.hash(key);
     let current = this.map[index].head;
 
@@ -63,9 +65,24 @@ class HashMap {
   }
 
   contains (key) {
-
+    if(!this.map) return false;
+    let index = this.hash(key);
+    if(!this.map[index]) return false;
+    let answer;
+    let current = this.map[index].head;
+    while(current){
+      let keyOfObject = Object.keys(current.value);
+      if(keyOfObject[0] === key){
+        return answer = true;
+      } 
+      if(!current.next) {
+        return answer = false;
+      }
+      current = current.next;
+    }
+    console.log({answer});
+    return answer;
   }
-
 }
 
 module.exports = HashMap;
