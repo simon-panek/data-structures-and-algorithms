@@ -1,6 +1,6 @@
 'use strict';
 
-const HashMap = require('/Users/simon/codefellows/data-structures-and-algorithms/javascript/code-challenges/hashMap/hashMap.js');
+const HashMap = require('../hashMap/hashMap.js');
 
 //split on space
 //put each word into an array compare index zero against all others, then 1st position to all others ...until match, then return match, if no match return 
