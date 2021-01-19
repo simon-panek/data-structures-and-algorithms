@@ -16,7 +16,7 @@ function treeIntersection (treeOne, treeTwo) {
   let outputArray = [];
 
   function _treeTraverse (node) {
-    console.log('node.value ', node.value);
+    // console.log('node.value ', node.value);
     if(!map.contains(node.value.toString())){
       map.set(node.value.toString());
       outputArray.push(node.value);
