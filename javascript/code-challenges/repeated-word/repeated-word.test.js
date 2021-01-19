@@ -15,4 +15,12 @@ describe ('Repeated word ', () => {
     let string = 'It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York';
     expect(repeatedWord(string)).toEqual('summer');
   })
+  it('should return null if there are no repeated words. ', () => {
+    let string = 'This string has no duplicates';
+    expect(repeatedWord(string)).toBe(null);
+  })
+  it('should return the first word if the entire string is duplicates. ', () => {
+    let string = 'dog dog dog dog dog dog';
+    expect(repeatedWord(string)).toEqual('dog');
+  })
 })
