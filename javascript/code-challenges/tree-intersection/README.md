@@ -7,7 +7,8 @@
 A function that takes in two binary trees and returns an array of the non-duplicate values.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+This approach involves traversing through each tree and checking to see if its value is already in the hash map, if it is not, it is placed in the map and in an output array.
 
 ## Solution
 

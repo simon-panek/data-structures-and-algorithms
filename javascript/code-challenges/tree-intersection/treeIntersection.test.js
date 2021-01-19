@@ -24,8 +24,7 @@ describe ('Tree Intersection ', () => {
     treeTwo.add(54);
     treeTwo.add(17);
     // console.log({treeTwo});
-    expect(treeIntersection(treeOne, treeTwo)).toEqual([4,2,1,3,6,5,7,18,17,32,54]);
-
+    expect(treeIntersection(treeOne, treeTwo)).toEqual([5,7,6]);
   })
   it('should return null if either tree does not exist', ()=> {
     let treeOne = new BinaryTree();
@@ -72,6 +71,6 @@ describe ('Tree Intersection ', () => {
     treeTwo.add(-54);
     treeTwo.add(7);
     // console.log({treeTwo});
-    expect(treeIntersection(treeOne, treeTwo)).toEqual([4,2,-1,-5,3,6,7,5,-54,18,32]);
+    expect(treeIntersection(treeOne, treeTwo)).toEqual([7,6]);
   })
 })
