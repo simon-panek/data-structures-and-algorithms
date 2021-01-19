@@ -50,6 +50,7 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 - [Quick Sort - Day 27](javascript/code-challenges/quick-sort/README.md)
 - [Quick Sort - Day 27 Blog](javascript/code-challenges/quick-sort/Blog.md)
 - [HashMap - Day 30](javascript/code-challenges/hashMap/README.md)
+- [Repeated Word - Day 31](javascript/code-challenges/repeated-word/README.md)
 
 
 The final structure should resemble this:s
