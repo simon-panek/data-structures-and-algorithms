@@ -138,6 +138,37 @@ class Graph {
     }
     return parentPath;
   }
+
+  //depth first search
+  size(startNode) {
+    let count = 0;
+
+    if(!startNode) return count;
+    const visitedNodes = new Set();
+
+
+    const _traverseNeighbors = (node) => {
+      //add node to the Set
+      visitedNodes.add(node);
+
+      count++;
+      //do logic hear if searching for something specific
+
+      //get all of the neighbors
+      const neighbors = this.getNeighbors(node);
+      //loop over all neighbors
+      for(let edge of neighbors){
+        //if the set doesn't have the node
+        if(!visitedNodes.has(edge.vertex)){
+          //then run function again
+          _traverseNeighbors(edge.vertex);
+        }
+      }
+    }
+    _traverseNeighbors(startNode);
+    return count;
+  }
+
 }
 
-module.exports = Graph;
+module.exports = {Vertex, Edge, Graph};
