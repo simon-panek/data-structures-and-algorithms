@@ -52,6 +52,8 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 - [HashMap - Day 30](javascript/code-challenges/hashMap/README.md)
 - [Repeated Word - Day 31](javascript/code-challenges/repeated-word/README.md)
 - [Tree Intersection - Day 32](javascript/code-challenges/tree-intersection/README.md)
+- [Left Join - Day 33]()
+- [Graph](javascript/code-challenges/graph/README.md)
 
 
 The final structure should resemble this:s
