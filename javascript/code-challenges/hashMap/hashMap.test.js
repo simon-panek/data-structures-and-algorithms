@@ -25,16 +25,16 @@ describe('------------HashMap-------------', () => {
     newMap.set('cow', 'bagel');
     expect(newMap.get('dog')).toEqual('soup');
   })
-  it('Should return false for a key that does not exist in the hash table', () => {
+  it('Should return null for a key that does not exist in the hash table', () => {
     let newMap = new HashMap(20);
     newMap.set('cat', 'sandwich');
     newMap.set('dog', 'soup');
     newMap.set('turkey', 'strawberry');
     newMap.set('cow', 'bagel');
-    expect(newMap.get('bird')).toEqual(false);
+    expect(newMap.get('bird')).toEqual(null);
   })
 
-  it('Should return false when given a key not in a map with collisions ', () => {
+  it('Should return null when given a key not in a map with collisions ', () => {
     let newMap = new HashMap(3);
     newMap.set('cat', 'sandwich');
     newMap.set('dog', 'soup');

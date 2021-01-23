@@ -49,7 +49,7 @@ class HashMap {
   }
 
   get(key) {
-    if(!this.contains(key)) return false;
+    if(!this.contains(key)) return null;
 
     let index = this.hash(key);
     let current = this.map[index].head;
