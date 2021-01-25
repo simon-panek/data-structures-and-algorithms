@@ -54,6 +54,7 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 - [Tree Intersection - Day 32](javascript/code-challenges/tree-intersection/README.md)
 - [Left Join - Day 33](javascript/code-challenges/left-join/README.md)
 - [Graph - Day 35](javascript/code-challenges/graph/README.md)
+- [Graph Breadth First Traversal - Day 36](javascript/code-challenges/graph/README-bfsGraph.md)
 
 The final structure should resemble this:
 
