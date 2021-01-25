@@ -45,6 +45,9 @@ class Graph {
 
   //breadthFirstSearch
   bfs(startNode){
+
+    if(!startNode) return null;
+
     const queue = [];
     // a set is an object that will only store unique keys
     const visitedNodes = new Set();
@@ -69,12 +72,15 @@ class Graph {
         queue.push(neighborNode);
       }
     }
-    //return the Set which 
+    //return the Set which contains all of the nodes in order visited
     return visitedNodes;
   }
 
   //depth first search
   dfs(startNode) {
+
+    if(!startNode) return null;
+
     const visitedNodes = new Set();
 
     const _traverseNeighbors = (node) => {
