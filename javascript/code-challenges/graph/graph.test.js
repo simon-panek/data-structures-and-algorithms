@@ -108,8 +108,4 @@ describe ('Graph Class', () => {
     expect(graph.size()).toEqual(0);
   })
 
-
-
-
-
 })

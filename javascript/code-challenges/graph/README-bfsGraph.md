@@ -1,6 +1,6 @@
 # Challenge Summary
 
-## Authors: Simon Panek, Lena Eivy
+## Authors: Simon Panek, Lena Eivy, Nathan Cox, Ricardo Barcenas
 
 ## Challenge Description
 
@@ -14,4 +14,4 @@ This solution has a Big (O) for time complexity of O(n^2) and for space complexi
 
 ## Solution
 
-![Whiteboard Solution]()
+![Whiteboard Solution](cc-36-whiteboard-bfs.png)

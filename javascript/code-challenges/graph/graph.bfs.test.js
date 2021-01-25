@@ -59,8 +59,4 @@ describe ('Graph Class', () => {
     expect(graph.bfs()).toEqual(null);
   })
 
-
-
-
-
 })
