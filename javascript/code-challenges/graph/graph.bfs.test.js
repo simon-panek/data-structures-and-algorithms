@@ -4,108 +4,59 @@ const {Vertex, Edge, Graph} = require ('./graph.js');
 
 describe ('Graph Class', () => {
 
-  it('1) should successfully add a node to the graph.', () => {
-    let vertex = new Vertex(7);
-    let graph = new Graph();
-    graph.addVertex(vertex);
-    // console.log({vertex}, {graph} )
-    expect(graph.getNeighbors(vertex)).toEqual([]);
-  })
-
-  it('2) should successfully add an edge to the graph.', () => {
-    let vertex = new Vertex(7);
-    let vertexTwo = new Vertex(9);
-    let graph = new Graph();
-    graph.addVertex(vertex);
-    graph.addVertex(vertexTwo);
-    graph.addDirectedEdge(vertex, vertexTwo, 5);
-    // console.log({vertex}, {vertexTwo}, {graph});
-    expect([...graph.bfs(vertex)]).toEqual([vertex, vertexTwo]);
-  })
-
-  it('3) should successfully return a collection of vertices from a  graph.', () => {
-    let vertex = new Vertex(7);
-    let vertexTwo = new Vertex(9);
-    let vertexThree = new Vertex(1);
-    let vertexFour = new Vertex(2);
+  it('1) should successfully return a collection of vertices from a  graph.', () => {
+    let vertex = new Vertex('Pandora');
+    let vertexTwo = new Vertex('Arendelle');
+    let vertexThree = new Vertex('Metroville');
+    let vertexFour = new Vertex('Monstropolis');
+    let vertexFive = new Vertex('Narnia');
+    let vertexSix = new Vertex('Naboo');
     let graph = new Graph();
     graph.addVertex(vertex);
     graph.addVertex(vertexTwo);
     graph.addVertex(vertexThree);
     graph.addVertex(vertexFour);
-    graph.addDirectedEdge(vertex, vertexTwo, 5);
-    graph.addDirectedEdge(vertexTwo, vertexThree, 6);
-    graph.addDirectedEdge(vertexThree, vertexFour, 7);
+    graph.addVertex(vertexFive);
+    graph.addVertex(vertexSix);
+    graph.addDirectedEdge(vertex, vertexTwo, 1);
+    graph.addDirectedEdge(vertexTwo, vertexThree, 1);
+    graph.addDirectedEdge(vertexTwo, vertexFour, 1);
+    graph.addDirectedEdge(vertexThree, vertexFour, 1);
+    graph.addDirectedEdge(vertexThree, vertexFive, 1);
+    graph.addDirectedEdge(vertexThree, vertexSix, 1);
+    graph.addDirectedEdge(vertexFour, vertexSix, 1);
+    graph.addDirectedEdge(vertexFive, vertexSix, 1);
     // console.log({graph});
-    expect([...graph.bfs(vertex)]).toEqual([vertex, vertexTwo, vertexThree, vertexFour]);
+    expect([...graph.bfs(vertex)]).toEqual([vertex, vertexTwo, vertexThree, vertexFour, vertexFive, vertexSix]);
   })
 
-  it('4) should successfully return a collection of neighbors graph.', () => {
-    let vertex = new Vertex(7);
-    let vertexTwo = new Vertex(9);
-    let vertexThree = new Vertex(1);
-    let vertexFour = new Vertex(2);
+  it('2) should successfully return a collection of vertices from a linear graph.', () => {
+    let vertex = new Vertex('Pandora');
+    let vertexTwo = new Vertex('Arendelle');
+    let vertexThree = new Vertex('Metroville');
+    let vertexFour = new Vertex('Monstropolis');
+    let vertexFive = new Vertex('Narnia');
+    let vertexSix = new Vertex('Naboo');
     let graph = new Graph();
     graph.addVertex(vertex);
     graph.addVertex(vertexTwo);
     graph.addVertex(vertexThree);
     graph.addVertex(vertexFour);
-    graph.addDirectedEdge(vertex, vertexTwo, 5);
-    graph.addDirectedEdge(vertexTwo, vertexThree, 6);
-    graph.addDirectedEdge(vertex, vertexFour, 7);
-    // console.log(graph.getNeighbors(vertex));
-    expect(graph.getNeighbors(vertex).length).toEqual(2);
+    graph.addVertex(vertexFive);
+    graph.addVertex(vertexSix);
+    graph.addDirectedEdge(vertex, vertexTwo, 1);
+    graph.addDirectedEdge(vertexTwo, vertexThree, 1);
+    graph.addDirectedEdge(vertexThree, vertexFour, 1);
+    graph.addDirectedEdge(vertexFour, vertexFive, 1);  
+    graph.addDirectedEdge(vertexFour, vertexSix, 1);
+    // console.log({graph});
+    expect([...graph.bfs(vertex)]).toEqual([vertex, vertexTwo, vertexThree, vertexFour, vertexFive, vertexSix]);
   })
 
-  it('5) should successfully return edge weights in a collection of neighbors graph.', () => {
-    let vertex = new Vertex(7);
-    let vertexTwo = new Vertex(9);
-    let vertexThree = new Vertex(1);
-    let vertexFour = new Vertex(2);
-    let graph = new Graph();
-    graph.addVertex(vertex);
-    graph.addVertex(vertexTwo);
-    graph.addVertex(vertexThree);
-    graph.addVertex(vertexFour);
-    graph.addDirectedEdge(vertex, vertexTwo, 5);
-    graph.addDirectedEdge(vertexTwo, vertexThree, 6);
-    graph.addDirectedEdge(vertex, vertexFour, 7);
-    // console.log(graph.getNeighbors(vertex));
-    expect(JSON.stringify(graph.getNeighbors(vertex))).toContain('weight');
-  })
-
-  it('6) should successfully return the size of a graph.', () => {
-    let vertex = new Vertex(7);
-    let vertexTwo = new Vertex(9);
-    let vertexThree = new Vertex(1);
-    let vertexFour = new Vertex(2);
-    let graph = new Graph();
-    graph.addVertex(vertex);
-    graph.addVertex(vertexTwo);
-    graph.addVertex(vertexThree);
-    graph.addVertex(vertexFour);
-    graph.addDirectedEdge(vertex, vertexTwo, 5);
-    graph.addDirectedEdge(vertexTwo, vertexThree, 6);
-    graph.addDirectedEdge(vertex, vertexFour, 7);
-    // console.log(graph.getNeighbors(vertex));
-    expect(graph.size(vertex)).toEqual(4);
-  })
-
-  //This test should not be used, it is not possible to have a graph with a single vertex and single edge, edges can only be added to the graph if they connect two vertices
-  it('7) should successfully return a graph with only one vertex and edge', () => {
-    let vertex = new Vertex(7);
-    let graph = new Graph();
-    // let edge = new Edge (vertex, 5)
-    graph.addVertex(vertex);
-    // graph.addDirectedEdge(vertex, vertexTwo, 5);
-    // console.log(graph);
-    expect(graph.size(vertex)).toEqual(1);
-  })
-
-  it('8) should successfully return a size of 0 for an empty graph', () => {
+  it('3) should return null for an empty graph', () => {
     let graph = new Graph();
     // console.log(graph);
-    expect(graph.size()).toEqual(0);
+    expect(graph.bfs()).toEqual(null);
   })
 
 
