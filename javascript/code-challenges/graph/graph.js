@@ -16,6 +16,7 @@ class Edge {
 class Graph {
   constructor(){
     this.adjacencyList = new Map();
+    // this.size = 0; //Can add this here and increment it every time a vertex is added to maintain the size attribute 
   }
 
   //add new vertex to this graph
