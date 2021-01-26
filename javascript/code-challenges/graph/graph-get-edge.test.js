@@ -4,7 +4,7 @@ const {Vertex, Edge, Graph} = require ('./graph.js');
 
 describe ('Graph Class', () => {
 
-  it('1) should successfully return a collection of vertices from a  graph.', () => {
+  it('1) should return true and the edge weight for two connected vertices', () => {
     let vertex = new Vertex('Pandora');
     let vertexTwo = new Vertex('Arendelle');
     let vertexThree = new Vertex('Metroville');
@@ -33,7 +33,7 @@ describe ('Graph Class', () => {
     expect(output).toEqual([true, 150]);
   })
 
-  it('2) should successfully return a collection of vertices from a  graph.', () => {
+  it('2) should return true and the edge weight sum for thee connected vertices', () => {
     let vertex = new Vertex('Pandora');
     let vertexTwo = new Vertex('Arendelle');
     let vertexThree = new Vertex('Metroville');
@@ -62,7 +62,7 @@ describe ('Graph Class', () => {
     expect(output).toEqual([true, 249]);
   })
 
-  it('3) should successfully return a collection of vertices from a  graph.', () => {
+  it('3) should successfully return true and the edge weight for two nodes requested out of order', () => {
     let vertex = new Vertex('Pandora');
     let vertexTwo = new Vertex('Arendelle');
     let vertexThree = new Vertex('Metroville');
@@ -100,7 +100,7 @@ describe ('Graph Class', () => {
     expect(output).toEqual([true, 250]);
   })
 
-  it('4) should successfully return a collection of vertices from a  graph.', () => {
+  it('4) should successfully return false and zero for two nodes that are not connected', () => {
     let vertex = new Vertex('Pandora');
     let vertexTwo = new Vertex('Arendelle');
     let vertexThree = new Vertex('Metroville');
