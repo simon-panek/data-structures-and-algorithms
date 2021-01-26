@@ -176,6 +176,32 @@ class Graph {
     return count;
   }
 
+  gitEdge (array){
+    if(!array[0] || !array[1]) {
+      return false, 0;
+    }
+
+    let outputBool = false; //fix this
+    let outputWeight = 0;
+
+    for (let i=0; i<=array.length-1; i++){
+      let neighbor = this.getNeighbors(array[i]);
+      
+      for (let j=0; j<=neighbor.length-1; j++) {
+
+        if(array[i+1] === neighbor[j].vertex) {
+        outputWeight += neighbor[j].weight;
+        outputBool = true;
+        }
+      }
+      if(outputBool === false) {
+        outputBool = false;
+        outputWeight = 0;
+        return [outputBool, outputWeight];
+      } 
+    }
+    return [outputBool, outputWeight];
+  }
 }
 
 module.exports = {Vertex, Edge, Graph};
