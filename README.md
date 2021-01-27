@@ -56,6 +56,7 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 - [Graph - Day 35](javascript/code-challenges/graph/README.md)
 - [Graph Breadth First Traversal - Day 36](javascript/code-challenges/graph/README-bfsGraph.md)
 - [Graph Get Edge - Day 37](javascript/code-challenges/graph/README-getEdge.md)
+- [Graph Depth first Traversal - Day 38](javascript/code-challenges/graph/README-dfsGraph.md)
 
 The final structure should resemble this:
 
