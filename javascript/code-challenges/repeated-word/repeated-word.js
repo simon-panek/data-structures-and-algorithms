@@ -15,10 +15,10 @@ function repeatedWord (string) {
   // /[^\s]/gi
 
   let cleanString = string.replace(/[^\w\s]/gi, '').toLowerCase(); 
-  console.log({cleanString});
+  // console.log({cleanString});
 
   let wordArray=cleanString.split(' ');
-  console.log({wordArray});
+  // console.log({wordArray});
 
   // place each word into a hash table
     //create a new map

@@ -20,7 +20,8 @@ class LinkedList {
     }
     let current = this.head;
     while(current.next){
-      current.next = node;
+      current = current.next;
+      // current.next = node;
     }
     current.next=node;
     node.next = null;
@@ -80,7 +81,7 @@ class HashMap {
       }
       current = current.next;
     }
-    console.log({answer});
+    // console.log({answer});
     return answer;
   }
 }
